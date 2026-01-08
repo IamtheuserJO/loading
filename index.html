@@ -2,9 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"
-    <title>Loading...</title>
+    <title> Loading...</title>
   </head>
   <body>
-    <p>Loading...</p>
-    <button>Is it done yet?</button>
+    <p id="loading">Loading...</p>
+    <button onclick="loading()">Is it done yet?</button>
+    <script>
+      let loadingVariable = "loading..."
+      function loading() {
+        loadingVariable = "still" + loadingVariable
+        document.getElementById("loading").innerHTML = loadingVariable
+      }
+    </script>
   </body>
