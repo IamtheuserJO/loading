@@ -10,7 +10,7 @@
       let loadingVariable = localStorage.getItem('storageOfLoading')
       function loading() {
         loadingVariable = "still " + loadingVariable
-        document.getElementById("loading").innerHTML = loadingVariable
+        document.getElementById("loading").innerHTML = loadingVariable + " loading..."
         localStorage.setItem('storageOfLoading', loadingVariable);
       }
     </script>
