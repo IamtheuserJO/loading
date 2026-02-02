@@ -7,11 +7,12 @@
     <p id="loading">Loading...</p>
     <button onclick="loading()">Is it done yet?</button>
     <script>
-      if (loadingVariable == null) {
-        loadingVariable = "still"
-      }
-
+      if (localStorage.getItem('storageOfLoading') == null) {
+        localStorage.setItem('storageOfLoading', "still"
+      } 
+      
       let loadingVariable = localStorage.getItem('storageOfLoading')
+      
       function loading() {
         loadingVariable = "still " + loadingVariable
         document.getElementById("loading").innerHTML = loadingVariable + " loading..."
