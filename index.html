@@ -12,6 +12,8 @@
       } 
       
       let loadingVariable = localStorage.getItem('storageOfLoading')
+
+      document.getElementById("loading").innerHTML = loadingVariable + " loading...";
       
       function loading() {
         loadingVariable = "still " + loadingVariable
