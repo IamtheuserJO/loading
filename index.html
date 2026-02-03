@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"
+    <meta charset="utf-8">
   </head>
   <body>
     <p id="loading">Loading...</p>
     <button onclick="loading()">Is it done yet?</button>
     <script>
       if (localStorage.getItem('storageOfLoading') == null) {
-        localStorage.setItem('storageOfLoading', "still"
+        localStorage.setItem('storageOfLoading', "still")
       } 
       
       let loadingVariable = localStorage.getItem('storageOfLoading')
