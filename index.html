@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>loading...</title>
+    <style>
+      #loadingButton {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
   <body>
     <p id="loading">Loading...</p>
-    <button onclick="loading()">loading...</button>
+    <button id="loadingButton" onclick="loading()">loading...</button>
     <script>
       if (localStorage.getItem('storageOfLoading') == null) {
         localStorage.setItem('storageOfLoading', "still")
