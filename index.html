@@ -9,17 +9,24 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: 7vh;
+        font-size: 10vh;
+      }
+      #resetButton {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        font-size: 5vh
       }
     </style>
   </head>
   <body>
     <p id="loading">Loading...</p>
     <button id="loadingButton" onclick="loading()">loading...</button>
+    <button id="resetButton" onclick="reset()">RESET</button>
     <script>
       if (localStorage.getItem('storageOfLoading') == null) {
         localStorage.setItem('storageOfLoading', "still")
-      } 
+      }
       
       let loadingVariable = localStorage.getItem('storageOfLoading')
 
@@ -27,6 +34,12 @@
       
       function loading() {
         loadingVariable = "still " + loadingVariable
+        document.getElementById("loading").innerHTML = loadingVariable + " loading..."
+        localStorage.setItem('storageOfLoading', loadingVariable);
+      }
+
+      function reset() {
+        loadingVariable = ""
         document.getElementById("loading").innerHTML = loadingVariable + " loading..."
         localStorage.setItem('storageOfLoading', loadingVariable);
       }
